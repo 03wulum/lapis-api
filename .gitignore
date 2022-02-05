@@ -4,4 +4,3 @@ data
 dist
 postgresdata
 .env
-env
