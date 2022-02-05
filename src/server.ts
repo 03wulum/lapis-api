@@ -28,7 +28,7 @@ class Server {
     }
 
     private routerConfig() {
-        this.app.use('/quoteOfDay', quoteOfDayRouter);
+        this.app.use('/quoteOfday', quoteOfDayRouter);
     }
 
     public start = (port: number) => {

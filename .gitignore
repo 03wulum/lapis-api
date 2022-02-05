@@ -3,4 +3,4 @@ node_modules
 data
 dist
 postgresdata
-env
+.env
