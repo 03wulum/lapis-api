@@ -1,7 +1,7 @@
 import express, { Application, Router } from 'express';
 import bodyParser from 'body-parser';
-import QuoteOFDayRouter from './routers/QuoteOfDayRouter';
-import pool from './dbconfig/dbconnector';
+import quoteOfDayRouter from './routers/QuoteOfDayRouter';
+import pool from './dbconfig/dbconfig';
 
 class Server {
     private app;
@@ -20,7 +20,9 @@ class Server {
 
     private dbConnect() {
         pool.connect(function (err, client, done) {
-            if (err) throw new Error(err);
+            if (err) {
+                return console.error('Error acquiring client', err.stack)
+              }
             console.log('Connected');
           }); 
     }
